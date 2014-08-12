@@ -1,7 +1,7 @@
 NorthStateFramework-cpp
 =======================
 
-An object-oriented framework for implementing UML 2.3 state machines. 
+An object-oriented framework for implementing UML state machines. 
 
 Coming Soon
 ===========
