@@ -1,0 +1,32 @@
+#ifndef TEST_MAIN_H
+#define TEST_MAIN_H
+
+#include "TimerResolutionTest.h"
+#include "TimerAccuracyTest.h"
+#include "TimerGetTimeTest.h"
+#include "ContextSwitchTest.h"
+#include "BasicStateMachineTest.h"
+#include "ShallowHistoryTest.h"
+#include "DeepHistoryTest.h"
+#include "BasicForkJoinTest.h"
+#include "DeepHistoryReEntryTest.h"
+#include "StateMachineRestartTest.h"
+#include "ForkJoinToForkJoinTransitionTest.h"
+#include "MultipleTriggersOnTransitionTest.h"
+#include "ExtendedRunTest.h"
+#include "ExceptionHandlingTest.h"
+#include "StrategyTest.h"
+#include "TransitionOrderTest.h"
+#include "DocumentNavigationTest.h"
+#include "MemoryLeakTest.h"
+#include "StateMachineDeleteTest.h"
+#include "TrivialStateMachineTest.h"
+#include "ThreadCreationTest.h"
+#include "ChoiceStateTest.h"
+#include "TraceAddTest.h"
+#include "MultipleStateMachineStressTest.h"
+#include "DocumentLoadTest.h"
+#include "ContinuouslyRunningTest.h"
+#include "TimerObservedTimeGapTest.h"
+
+#endif //TEST_MAIN_H

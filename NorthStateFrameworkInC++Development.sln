@@ -1,0 +1,119 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{50061747-0B2A-4712-AEB6-40495C44E843}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CombatExample", "Examples\CombatExample\CombatExample.vcproj", "{75910CBA-A008-4FC9-9A4B-8B21AAFD39AE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommandProcessorExample", "Examples\CommandProcessorExample\CommandProcessorExample.vcproj", "{FD9FF24E-9721-402B-BAAA-875DF5C699CF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CycleABExample", "Examples\CycleABExample\CycleABExample.vcproj", "{95A0A881-0EBC-4264-97A3-909A547CD24D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WorkHardPlayHardExample", "Examples\WorkHardPlayHardExample\WorkHardPlayHardExample.vcproj", "{B8D6F0E7-48A7-45BF-952F-6320C78BA84F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{8FA18CCE-C5B6-4910-A936-5EC9F39138C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doxygen", "Doxygen", "{5B1DD6FB-3147-4115-8FBF-87D76131B248}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Doxygen\Doxyfile = Documentation\Doxygen\Doxyfile
+		Documentation\Doxygen\DoxygenFooter.htm = Documentation\Doxygen\DoxygenFooter.htm
+		Documentation\Doxygen\DoxygenMainPage.txt = Documentation\Doxygen\DoxygenMainPage.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkingWith", "WorkingWith", "{9982B84A-408A-441A-B178-0272152E113A}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\WorkingWith\WorkingWithNorthStateFrameworkInC++.doc = Documentation\WorkingWith\WorkingWithNorthStateFrameworkInC++.doc
+		Documentation\WorkingWith\WorkingWithNorthStateFrameworkInC++.pdf = Documentation\WorkingWith\WorkingWithNorthStateFrameworkInC++.pdf
+		Documentation\WorkingWith\WorkingWithNorthStateFrameworkInC++.vsd = Documentation\WorkingWith\WorkingWithNorthStateFrameworkInC++.vsd
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommandProcessorWithResetStateMachineExample", "Examples\CommandProcessorWithResetStateMachineExample\CommandProcessorWithResetStateMachineExample.vcproj", "{36F1C105-6D9A-4317-A099-0BAF3E63CF24}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommandProcessorWithResetStrategyExample", "Examples\CommandProcessorWithResetStrategyExample\CommandProcessorWithResetStrategyExample.vcproj", "{3DAA20E5-ADE7-4D55-ABFC-C71A8CC075CD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommandProcessorWithRetryExample", "Examples\CommandProcessorWithRetryExample\CommandProcessorWithRetryExample.vcproj", "{5E40C07D-D263-4E5D-8618-B33E51661790}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{4264CCBB-1ED0-4172-A8D6-700FB99D0AC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{B496FC9C-8944-4697-82EE-26A410BF1535}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\FrameworkTest.vcproj", "{CE4F6D0E-A8C2-4325-A6B7-CEE29CDA94F1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NorthStateFramework", "Framework\NorthStateFramework.vcproj", "{4BD0BE37-1F6B-4CFA-A60D-B65590D64EC1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Documentation", "Documentation\Documentation.vcproj", "{A9F45575-0344-4C27-8A34-4DB43A20D17F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{36F1C105-6D9A-4317-A099-0BAF3E63CF24} = {36F1C105-6D9A-4317-A099-0BAF3E63CF24}
+		{CE4F6D0E-A8C2-4325-A6B7-CEE29CDA94F1} = {CE4F6D0E-A8C2-4325-A6B7-CEE29CDA94F1}
+		{4BD0BE37-1F6B-4CFA-A60D-B65590D64EC1} = {4BD0BE37-1F6B-4CFA-A60D-B65590D64EC1}
+		{FD9FF24E-9721-402B-BAAA-875DF5C699CF} = {FD9FF24E-9721-402B-BAAA-875DF5C699CF}
+		{5E40C07D-D263-4E5D-8618-B33E51661790} = {5E40C07D-D263-4E5D-8618-B33E51661790}
+		{95A0A881-0EBC-4264-97A3-909A547CD24D} = {95A0A881-0EBC-4264-97A3-909A547CD24D}
+		{75910CBA-A008-4FC9-9A4B-8B21AAFD39AE} = {75910CBA-A008-4FC9-9A4B-8B21AAFD39AE}
+		{3DAA20E5-ADE7-4D55-ABFC-C71A8CC075CD} = {3DAA20E5-ADE7-4D55-ABFC-C71A8CC075CD}
+		{B8D6F0E7-48A7-45BF-952F-6320C78BA84F} = {B8D6F0E7-48A7-45BF-952F-6320C78BA84F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75910CBA-A008-4FC9-9A4B-8B21AAFD39AE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{75910CBA-A008-4FC9-9A4B-8B21AAFD39AE}.Debug|Win32.Build.0 = Debug|Win32
+		{75910CBA-A008-4FC9-9A4B-8B21AAFD39AE}.Release|Win32.ActiveCfg = Release|Win32
+		{75910CBA-A008-4FC9-9A4B-8B21AAFD39AE}.Release|Win32.Build.0 = Release|Win32
+		{FD9FF24E-9721-402B-BAAA-875DF5C699CF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FD9FF24E-9721-402B-BAAA-875DF5C699CF}.Debug|Win32.Build.0 = Debug|Win32
+		{FD9FF24E-9721-402B-BAAA-875DF5C699CF}.Release|Win32.ActiveCfg = Release|Win32
+		{FD9FF24E-9721-402B-BAAA-875DF5C699CF}.Release|Win32.Build.0 = Release|Win32
+		{95A0A881-0EBC-4264-97A3-909A547CD24D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{95A0A881-0EBC-4264-97A3-909A547CD24D}.Debug|Win32.Build.0 = Debug|Win32
+		{95A0A881-0EBC-4264-97A3-909A547CD24D}.Release|Win32.ActiveCfg = Release|Win32
+		{95A0A881-0EBC-4264-97A3-909A547CD24D}.Release|Win32.Build.0 = Release|Win32
+		{B8D6F0E7-48A7-45BF-952F-6320C78BA84F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B8D6F0E7-48A7-45BF-952F-6320C78BA84F}.Debug|Win32.Build.0 = Debug|Win32
+		{B8D6F0E7-48A7-45BF-952F-6320C78BA84F}.Release|Win32.ActiveCfg = Release|Win32
+		{B8D6F0E7-48A7-45BF-952F-6320C78BA84F}.Release|Win32.Build.0 = Release|Win32
+		{36F1C105-6D9A-4317-A099-0BAF3E63CF24}.Debug|Win32.ActiveCfg = Debug|Win32
+		{36F1C105-6D9A-4317-A099-0BAF3E63CF24}.Debug|Win32.Build.0 = Debug|Win32
+		{36F1C105-6D9A-4317-A099-0BAF3E63CF24}.Release|Win32.ActiveCfg = Release|Win32
+		{36F1C105-6D9A-4317-A099-0BAF3E63CF24}.Release|Win32.Build.0 = Release|Win32
+		{3DAA20E5-ADE7-4D55-ABFC-C71A8CC075CD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3DAA20E5-ADE7-4D55-ABFC-C71A8CC075CD}.Debug|Win32.Build.0 = Debug|Win32
+		{3DAA20E5-ADE7-4D55-ABFC-C71A8CC075CD}.Release|Win32.ActiveCfg = Release|Win32
+		{3DAA20E5-ADE7-4D55-ABFC-C71A8CC075CD}.Release|Win32.Build.0 = Release|Win32
+		{5E40C07D-D263-4E5D-8618-B33E51661790}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5E40C07D-D263-4E5D-8618-B33E51661790}.Debug|Win32.Build.0 = Debug|Win32
+		{5E40C07D-D263-4E5D-8618-B33E51661790}.Release|Win32.ActiveCfg = Release|Win32
+		{5E40C07D-D263-4E5D-8618-B33E51661790}.Release|Win32.Build.0 = Release|Win32
+		{CE4F6D0E-A8C2-4325-A6B7-CEE29CDA94F1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CE4F6D0E-A8C2-4325-A6B7-CEE29CDA94F1}.Debug|Win32.Build.0 = Debug|Win32
+		{CE4F6D0E-A8C2-4325-A6B7-CEE29CDA94F1}.Release|Win32.ActiveCfg = Release|Win32
+		{CE4F6D0E-A8C2-4325-A6B7-CEE29CDA94F1}.Release|Win32.Build.0 = Release|Win32
+		{4BD0BE37-1F6B-4CFA-A60D-B65590D64EC1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4BD0BE37-1F6B-4CFA-A60D-B65590D64EC1}.Debug|Win32.Build.0 = Debug|Win32
+		{4BD0BE37-1F6B-4CFA-A60D-B65590D64EC1}.Release|Win32.ActiveCfg = Release|Win32
+		{4BD0BE37-1F6B-4CFA-A60D-B65590D64EC1}.Release|Win32.Build.0 = Release|Win32
+		{A9F45575-0344-4C27-8A34-4DB43A20D17F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A9F45575-0344-4C27-8A34-4DB43A20D17F}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{75910CBA-A008-4FC9-9A4B-8B21AAFD39AE} = {50061747-0B2A-4712-AEB6-40495C44E843}
+		{FD9FF24E-9721-402B-BAAA-875DF5C699CF} = {50061747-0B2A-4712-AEB6-40495C44E843}
+		{95A0A881-0EBC-4264-97A3-909A547CD24D} = {50061747-0B2A-4712-AEB6-40495C44E843}
+		{B8D6F0E7-48A7-45BF-952F-6320C78BA84F} = {50061747-0B2A-4712-AEB6-40495C44E843}
+		{36F1C105-6D9A-4317-A099-0BAF3E63CF24} = {50061747-0B2A-4712-AEB6-40495C44E843}
+		{3DAA20E5-ADE7-4D55-ABFC-C71A8CC075CD} = {50061747-0B2A-4712-AEB6-40495C44E843}
+		{5E40C07D-D263-4E5D-8618-B33E51661790} = {50061747-0B2A-4712-AEB6-40495C44E843}
+		{5B1DD6FB-3147-4115-8FBF-87D76131B248} = {8FA18CCE-C5B6-4910-A936-5EC9F39138C4}
+		{9982B84A-408A-441A-B178-0272152E113A} = {8FA18CCE-C5B6-4910-A936-5EC9F39138C4}
+		{A9F45575-0344-4C27-8A34-4DB43A20D17F} = {8FA18CCE-C5B6-4910-A936-5EC9F39138C4}
+		{4BD0BE37-1F6B-4CFA-A60D-B65590D64EC1} = {4264CCBB-1ED0-4172-A8D6-700FB99D0AC1}
+		{CE4F6D0E-A8C2-4325-A6B7-CEE29CDA94F1} = {B496FC9C-8944-4697-82EE-26A410BF1535}
+	EndGlobalSection
+EndGlobal
