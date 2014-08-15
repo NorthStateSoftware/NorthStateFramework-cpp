@@ -1,0 +1,4 @@
+*.obj
+Build
+HTML
+/Documentation/Doxygen/DoxygenLogfile.txt
