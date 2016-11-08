@@ -247,8 +247,7 @@ namespace NorthStateFramework
         return eventCopy;
     }
 
-
-    // Defined here work with both GCC and MSVC compilers
+    // Defined here to work with both GCC and MSVC compilers
 
     template<class DataType>
     inline void NSFDataEvent<DataType>::setData(const DataType& value)

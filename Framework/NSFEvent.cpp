@@ -79,9 +79,9 @@ namespace NorthStateFramework
         destination->queueEvent(this);
     }
 
-    void NSFEvent::queueEvent(const NSFContext& context)
+    void NSFEvent::queueEvent(const NSFStateMachineContext& context)
     {
-        queueEvent();
+        destination->queueEvent(this, context.getSource());
     }
 
     void NSFEvent::schedule(NSFTime delayTime, NSFTime repeatTime)

@@ -22,12 +22,8 @@
 #include "NSFTimerAction.h"
 #include "NSFOSTypes.h"
 
-
 namespace NorthStateFramework
 {
-    // Forward declarations
-    class NSFContext;
-
     /// <summary>
     /// Represents an event which can trigger a transition or be handled by an event handler.
     /// </summary>
@@ -170,8 +166,11 @@ namespace NorthStateFramework
         /// </summary>
         /// <remarks>
         /// This method is provided to allow event queuing to be registered as an entry, exit, or transition action.
+        /// The event source will be changed to the context source for logging purposes during execution of this method.
+        /// This method is not thread safe from a logging perspective, so that two threads calling this method on the same
+        /// event can result in indeterminate logging of the source.
         /// </remarks>
-        void queueEvent(const NSFContext& context);
+        void queueEvent(const NSFStateMachineContext& context);
 
         /// <summary>
         /// Schedules the event to execute.

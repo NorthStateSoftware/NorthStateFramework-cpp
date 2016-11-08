@@ -29,6 +29,7 @@ namespace NorthStateFramework
     class NSFStateMachine;
     class NSFTimerThread;
     class NSFTransition;
+    class NSFStateMachineContext;
 }
 
 #endif // NSF_STATE_MACHINE_TYPES_H

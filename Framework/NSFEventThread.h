@@ -55,10 +55,10 @@ namespace NorthStateFramework
         virtual ~NSFEventThread();
 
         /// <summary>
-        /// Gets a list of associated event handlers.
+        /// Gets a list of event handlers using the thread.
         /// </summary>
         /// <returns>
-        /// The list of associated event handlers.
+        /// The list of event handlers using the thread.
         /// </returns>
         std::list<INSFEventHandler*> getEventHandlers();
 
