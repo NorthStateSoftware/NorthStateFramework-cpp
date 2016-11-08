@@ -4,4 +4,6 @@ HTML
 /Documentation/Doxygen/DoxygenLogfile.txt
 *.vspscc
 *.sdf
+*.opensdf
 *.sou
+/Test/*TraceFile*.xml

@@ -69,7 +69,7 @@ namespace NSFTest
         state2ToState1Transition("State2ToState1", &state2, &state1, &event1, NULL, NULL),
         state2Strategy("State2Strategy", &state2)
     {
-        state2Strategy.getState5().EntryActions += NSFAction<NSFEvent, NSFStateMachineContext>(&event2, &NSFEvent::queueEvent);
+        state2Strategy.getState5().EntryActions += NSFAction(&event2, &NSFEvent::queueEvent);
     }
 
     bool StrategyTest::runTest(NSFString& errorMessage)
