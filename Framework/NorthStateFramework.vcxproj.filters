@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="OSPorts">
+      <UniqueIdentifier>{d9712044-64b2-4ee1-a71b-9d094483ffbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\Win32">
+      <UniqueIdentifier>{d30c4379-43bb-40b3-88c5-d5914448daad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\Win32\Header Files">
+      <UniqueIdentifier>{f0010c2f-b54e-44a0-ab23-ff42096b690f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\Win32\Source Files">
+      <UniqueIdentifier>{ef1e59a0-c8ba-4433-ab61-325e9be9a8f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\eCOS">
+      <UniqueIdentifier>{2e8fcd16-9344-42d9-82d4-2ae61e6199cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\eCOS\Header Files">
+      <UniqueIdentifier>{b8671e8a-7111-4ded-9e85-55798fc86208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\eCOS\Source Files">
+      <UniqueIdentifier>{f5eceb7b-0b20-46b1-b4e1-34b0cbefb7d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\POSIX">
+      <UniqueIdentifier>{baf92db1-fc32-4776-a20d-e5f0b9cb4213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\POSIX\Header Files">
+      <UniqueIdentifier>{dc7acdc2-9c1d-4acc-8622-d4ee0bfe0450}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\POSIX\Source Files">
+      <UniqueIdentifier>{0b3557ba-8443-4744-8779-20a37d64cb79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\WinCE">
+      <UniqueIdentifier>{64d8b56e-6822-4f35-9544-512a85c2328b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\WinCE\Source Files">
+      <UniqueIdentifier>{643e1fe9-ca47-489e-a5ee-dd00b71b313f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OSPorts\WinCE\Header Files">
+      <UniqueIdentifier>{3e3baefb-c91b-4fa5-8b16-2b39fd589286}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NSFChoiceState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFCompositeState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFDebugUtility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFDeepHistory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFDelegates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFEnvironment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFEventHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFEventThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFExceptionHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFExternalTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFForkJoin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFForkJoinTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFInitialState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFInternalTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFLocalTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFOSMutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFOSSignal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFOSThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFOSTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFRegion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFScheduledAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFShallowHistory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFStateMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFTaggedTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFTimerAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFTimerThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFTraceLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFXMLDocument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSFXMLElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\Win32\NSFOSMutex_Win32.cpp">
+      <Filter>OSPorts\Win32\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\Win32\NSFOSSignal_Win32.cpp">
+      <Filter>OSPorts\Win32\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\Win32\NSFOSThread_Win32.cpp">
+      <Filter>OSPorts\Win32\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\Win32\NSFOSTimer_Win32.cpp">
+      <Filter>OSPorts\Win32\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\eCOS\NSFOSMutex_eCOS.cpp">
+      <Filter>OSPorts\eCOS\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\eCOS\NSFOSSignal_eCOS.cpp">
+      <Filter>OSPorts\eCOS\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\eCOS\NSFOSThread_eCOS.cpp">
+      <Filter>OSPorts\eCOS\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\eCOS\NSFOSTimer_eCOS.cpp">
+      <Filter>OSPorts\eCOS\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\POSIX\NSFOSMutex_POSIX.cpp">
+      <Filter>OSPorts\POSIX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\POSIX\NSFOSSignal_POSIX.cpp">
+      <Filter>OSPorts\POSIX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\POSIX\NSFOSThread_POSIX.cpp">
+      <Filter>OSPorts\POSIX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\POSIX\NSFOSTimer_POSIX.cpp">
+      <Filter>OSPorts\POSIX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\WinCE\NSFOSMutex_WinCE.cpp">
+      <Filter>OSPorts\WinCE\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\WinCE\NSFOSSignal_WinCE.cpp">
+      <Filter>OSPorts\WinCE\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\WinCE\NSFOSThread_WinCE.cpp">
+      <Filter>OSPorts\WinCE\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OSPorts\WinCE\NSFOSTimer_WinCE.cpp">
+      <Filter>OSPorts\WinCE\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NorthStateFramework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFBooleanGuard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFChoiceState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFCompositeState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFCoreTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFCustomConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFDataEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFDebugUtility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFDeepHistory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFDelegateContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFDelegates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFEnvironment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFEventHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFEventThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFExceptionHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFExternalTransition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFForkJoin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFForkJoinTransition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFInitialState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFInternalTransition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFLocalTransition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFOSMutex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFOSSignal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFOSThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFOSTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFRegion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFScheduledAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFShallowHistory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFStateMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFStateMachineTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFTaggedTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFTimerAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFTimerThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFTraceLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFTransition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFVoidAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFXMLDocument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSFXMLElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\Win32\NSFOSTimer_Win32.h">
+      <Filter>OSPorts\Win32\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\eCOS\NSFOSMutex_eCOS.h">
+      <Filter>OSPorts\eCOS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\eCOS\NSFOSSignal_eCOS.h">
+      <Filter>OSPorts\eCOS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\eCOS\NSFOSThread_eCOS.h">
+      <Filter>OSPorts\eCOS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\eCOS\NSFOSTimer_eCOS.h">
+      <Filter>OSPorts\eCOS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\POSIX\NSFOSMutex_POSIX.h">
+      <Filter>OSPorts\POSIX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\POSIX\NSFOSSignal_POSIX.h">
+      <Filter>OSPorts\POSIX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\POSIX\NSFOSThread_POSIX.h">
+      <Filter>OSPorts\POSIX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\POSIX\NSFOSTimer_POSIX.h">
+      <Filter>OSPorts\POSIX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\WinCE\NSFOSMutex_WinCE.h">
+      <Filter>OSPorts\WinCE\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\WinCE\NSFOSSignal_WinCE.h">
+      <Filter>OSPorts\WinCE\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\WinCE\NSFOSThread_WinCE.h">
+      <Filter>OSPorts\WinCE\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSPorts\WinCE\NSFOSTimer_WinCE.h">
+      <Filter>OSPorts\WinCE\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="NSFOSTimer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OSPorts\Win32\NSFOSMutex_Win32.h">
+      <Filter>OSPorts\Win32\Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OSPorts\Win32\NSFOSSignal_Win32.h">
+      <Filter>OSPorts\Win32\Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OSPorts\Win32\NSFOSThread_Win32.h">
+      <Filter>OSPorts\Win32\Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

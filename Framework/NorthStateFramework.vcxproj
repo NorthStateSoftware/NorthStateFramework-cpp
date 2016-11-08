@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4BD0BE37-1F6B-4CFA-A60D-B65590D64EC1}</ProjectGuid>
+    <RootNamespace>NorthStateFrameworkInCPP</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="NSFChoiceState.cpp" />
+    <ClCompile Include="NSFCompositeState.cpp" />
+    <ClCompile Include="NSFDebugUtility.cpp" />
+    <ClCompile Include="NSFDeepHistory.cpp" />
+    <ClCompile Include="NSFDelegates.cpp" />
+    <ClCompile Include="NSFEnvironment.cpp" />
+    <ClCompile Include="NSFEvent.cpp" />
+    <ClCompile Include="NSFEventHandler.cpp" />
+    <ClCompile Include="NSFEventThread.cpp" />
+    <ClCompile Include="NSFExceptionHandler.cpp" />
+    <ClCompile Include="NSFExternalTransition.cpp" />
+    <ClCompile Include="NSFForkJoin.cpp" />
+    <ClCompile Include="NSFForkJoinTransition.cpp" />
+    <ClCompile Include="NSFInitialState.cpp" />
+    <ClCompile Include="NSFInternalTransition.cpp" />
+    <ClCompile Include="NSFLocalTransition.cpp" />
+    <ClCompile Include="NSFOSMutex.cpp" />
+    <ClCompile Include="NSFOSSignal.cpp" />
+    <ClCompile Include="NSFOSThread.cpp" />
+    <ClCompile Include="NSFOSTimer.cpp" />
+    <ClCompile Include="NSFRegion.cpp" />
+    <ClCompile Include="NSFScheduledAction.cpp" />
+    <ClCompile Include="NSFShallowHistory.cpp" />
+    <ClCompile Include="NSFState.cpp" />
+    <ClCompile Include="NSFStateMachine.cpp" />
+    <ClCompile Include="NSFTaggedTypes.cpp" />
+    <ClCompile Include="NSFThread.cpp" />
+    <ClCompile Include="NSFTimerAction.cpp" />
+    <ClCompile Include="NSFTimerThread.cpp" />
+    <ClCompile Include="NSFTraceLog.cpp" />
+    <ClCompile Include="NSFTransition.cpp" />
+    <ClCompile Include="NSFXMLDocument.cpp" />
+    <ClCompile Include="NSFXMLElement.cpp" />
+    <ClCompile Include="OSPorts\eCOS\NSFOSMutex_eCOS.cpp" />
+    <ClCompile Include="OSPorts\eCOS\NSFOSSignal_eCOS.cpp" />
+    <ClCompile Include="OSPorts\eCOS\NSFOSThread_eCOS.cpp" />
+    <ClCompile Include="OSPorts\eCOS\NSFOSTimer_eCOS.cpp" />
+    <ClCompile Include="OSPorts\POSIX\NSFOSMutex_POSIX.cpp" />
+    <ClCompile Include="OSPorts\POSIX\NSFOSSignal_POSIX.cpp" />
+    <ClCompile Include="OSPorts\POSIX\NSFOSThread_POSIX.cpp" />
+    <ClCompile Include="OSPorts\POSIX\NSFOSTimer_POSIX.cpp" />
+    <ClCompile Include="OSPorts\Win32\NSFOSMutex_Win32.cpp" />
+    <ClCompile Include="OSPorts\Win32\NSFOSSignal_Win32.cpp" />
+    <ClCompile Include="OSPorts\Win32\NSFOSThread_Win32.cpp" />
+    <ClCompile Include="OSPorts\Win32\NSFOSTimer_Win32.cpp" />
+    <ClCompile Include="OSPorts\WinCE\NSFOSMutex_WinCE.cpp" />
+    <ClCompile Include="OSPorts\WinCE\NSFOSSignal_WinCE.cpp" />
+    <ClCompile Include="OSPorts\WinCE\NSFOSThread_WinCE.cpp" />
+    <ClCompile Include="OSPorts\WinCE\NSFOSTimer_WinCE.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NorthStateFramework.h" />
+    <ClInclude Include="NSFBooleanGuard.h" />
+    <ClInclude Include="NSFChoiceState.h" />
+    <ClInclude Include="NSFCompositeState.h" />
+    <ClInclude Include="NSFCoreTypes.h" />
+    <ClInclude Include="NSFCustomConfig.h" />
+    <ClInclude Include="NSFDataEvent.h" />
+    <ClInclude Include="NSFDebugUtility.h" />
+    <ClInclude Include="NSFDeepHistory.h" />
+    <ClInclude Include="NSFDelegateContext.h" />
+    <ClInclude Include="NSFDelegates.h" />
+    <ClInclude Include="NSFEnvironment.h" />
+    <ClInclude Include="NSFEvent.h" />
+    <ClInclude Include="NSFEventHandler.h" />
+    <ClInclude Include="NSFEventThread.h" />
+    <ClInclude Include="NSFExceptionHandler.h" />
+    <ClInclude Include="NSFExternalTransition.h" />
+    <ClInclude Include="NSFForkJoin.h" />
+    <ClInclude Include="NSFForkJoinTransition.h" />
+    <ClInclude Include="NSFInitialState.h" />
+    <ClInclude Include="NSFInternalTransition.h" />
+    <ClInclude Include="NSFLocalTransition.h" />
+    <ClInclude Include="NSFOSMutex.h" />
+    <ClInclude Include="NSFOSSignal.h" />
+    <ClInclude Include="NSFOSThread.h" />
+    <CustomBuild Include="NSFOSTimer.h" />
+    <ClInclude Include="NSFOSTypes.h" />
+    <ClInclude Include="NSFRegion.h" />
+    <ClInclude Include="NSFScheduledAction.h" />
+    <ClInclude Include="NSFShallowHistory.h" />
+    <ClInclude Include="NSFState.h" />
+    <ClInclude Include="NSFStateMachine.h" />
+    <ClInclude Include="NSFStateMachineTypes.h" />
+    <ClInclude Include="NSFTaggedTypes.h" />
+    <ClInclude Include="NSFThread.h" />
+    <ClInclude Include="NSFTimerAction.h" />
+    <ClInclude Include="NSFTimerThread.h" />
+    <ClInclude Include="NSFTraceLog.h" />
+    <ClInclude Include="NSFTransition.h" />
+    <ClInclude Include="NSFVoidAction.h" />
+    <ClInclude Include="NSFXMLDocument.h" />
+    <ClInclude Include="NSFXMLElement.h" />
+    <ClInclude Include="OSPorts\eCOS\NSFOSMutex_eCOS.h" />
+    <ClInclude Include="OSPorts\eCOS\NSFOSSignal_eCOS.h" />
+    <ClInclude Include="OSPorts\eCOS\NSFOSThread_eCOS.h" />
+    <ClInclude Include="OSPorts\eCOS\NSFOSTimer_eCOS.h" />
+    <ClInclude Include="OSPorts\POSIX\NSFOSMutex_POSIX.h" />
+    <ClInclude Include="OSPorts\POSIX\NSFOSSignal_POSIX.h" />
+    <ClInclude Include="OSPorts\POSIX\NSFOSThread_POSIX.h" />
+    <ClInclude Include="OSPorts\POSIX\NSFOSTimer_POSIX.h" />
+    <CustomBuild Include="OSPorts\Win32\NSFOSMutex_Win32.h" />
+    <CustomBuild Include="OSPorts\Win32\NSFOSSignal_Win32.h" />
+    <CustomBuild Include="OSPorts\Win32\NSFOSThread_Win32.h" />
+    <ClInclude Include="OSPorts\Win32\NSFOSTimer_Win32.h" />
+    <ClInclude Include="OSPorts\WinCE\NSFOSMutex_WinCE.h" />
+    <ClInclude Include="OSPorts\WinCE\NSFOSSignal_WinCE.h" />
+    <ClInclude Include="OSPorts\WinCE\NSFOSThread_WinCE.h" />
+    <ClInclude Include="OSPorts\WinCE\NSFOSTimer_WinCE.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

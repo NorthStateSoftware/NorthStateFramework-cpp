@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Test</ProjectName>
+    <ProjectGuid>{CE4F6D0E-A8C2-4325-A6B7-CEE29CDA94F1}</ProjectGuid>
+    <RootNamespace>NSFTestInCPP</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>cd "$(OutDir)"
+REM - COPY the files needed for the document test.
+copy "$(ProjectDir)ValidTest.xml" "ValidTest.xml"
+copy "$(ProjectDir)InvalidTest.xml" "InvalidTest.xml"
+</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/DPSAPI_VERSION=1 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Framework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>cd "$(OutDir)"
+REM - COPY the files needed for the document test.
+copy "$(ProjectDir)ValidTest.xml" "ValidTest.xml"
+copy "$(ProjectDir)InvalidTest.xml" "InvalidTest.xml"
+</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Framework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\NorthStateFramework.vcxproj">
+      <Project>{4bd0be37-1f6b-4cfa-a60d-b65590d64ec1}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BasicForkJoinTest.cpp" />
+    <ClCompile Include="BasicStateMachineTest.cpp" />
+    <ClCompile Include="ChoiceStateTest.cpp" />
+    <ClCompile Include="ContextSwitchTest.cpp" />
+    <ClCompile Include="ContinuouslyRunningTest.cpp" />
+    <ClCompile Include="DeepHistoryReEntryTest.cpp" />
+    <ClCompile Include="DeepHistoryTest.cpp" />
+    <ClCompile Include="DocumentLoadTest.cpp" />
+    <ClCompile Include="DocumentNavigationTest.cpp" />
+    <ClCompile Include="ExceptionHandlingTest.cpp" />
+    <ClCompile Include="ExtendedRunTest.cpp" />
+    <ClCompile Include="ForkJoinToForkJoinTransitionTest.cpp" />
+    <ClCompile Include="MemoryLeakTest.cpp" />
+    <ClCompile Include="MultipleStateMachineStressTest.cpp" />
+    <ClCompile Include="MultipleTriggersOnTransitionTest.cpp" />
+    <ClCompile Include="ShallowHistoryTest.cpp" />
+    <ClCompile Include="StateMachineDeleteTest.cpp" />
+    <ClCompile Include="StateMachineRestartTest.cpp" />
+    <ClCompile Include="StrategyTest.cpp" />
+    <ClCompile Include="TestHarness.cpp" />
+    <ClCompile Include="TestInterface.cpp" />
+    <ClCompile Include="TestMain.cpp" />
+    <ClCompile Include="ThreadCreationTest.cpp" />
+    <ClCompile Include="TimerAccuracyTest.cpp" />
+    <ClCompile Include="TimerGetTimeTest.cpp" />
+    <ClCompile Include="TimerObservedTimeGapTest.cpp" />
+    <ClCompile Include="TimerResolutionTest.cpp" />
+    <ClCompile Include="TraceAddTest.cpp" />
+    <ClCompile Include="TransitionOrderTest.cpp" />
+    <ClCompile Include="TrivialStateMachineTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BasicForkJoinTest.h" />
+    <ClInclude Include="BasicStateMachineTest.h" />
+    <ClInclude Include="ChoiceStateTest.h" />
+    <ClInclude Include="ContextSwitchTest.h" />
+    <ClInclude Include="ContinuouslyRunningTest.h" />
+    <ClInclude Include="DeepHistoryReEntryTest.h" />
+    <ClInclude Include="DeepHistoryTest.h" />
+    <ClInclude Include="DocumentLoadTest.h" />
+    <ClInclude Include="DocumentNavigationTest.h" />
+    <ClInclude Include="ExceptionHandlingTest.h" />
+    <ClInclude Include="ExtendedRunTest.h" />
+    <ClInclude Include="ForkJoinToForkJoinTransitionTest.h" />
+    <ClInclude Include="MemoryLeakTest.h" />
+    <ClInclude Include="MultipleStateMachineStressTest.h" />
+    <ClInclude Include="MultipleTriggersOnTransitionTest.h" />
+    <ClInclude Include="ShallowHistoryTest.h" />
+    <ClInclude Include="StateMachineDeleteTest.h" />
+    <ClInclude Include="StateMachineRestartTest.h" />
+    <ClInclude Include="StrategyTest.h" />
+    <ClInclude Include="TestHarness.h" />
+    <ClInclude Include="TestInterface.h" />
+    <ClInclude Include="TestMain.h" />
+    <ClInclude Include="ThreadCreationTest.h" />
+    <ClInclude Include="TimerAccuracyTest.h" />
+    <ClInclude Include="TimerGetTimeTest.h" />
+    <ClInclude Include="TimerObservedTimeGapTest.h" />
+    <ClInclude Include="TimerResolutionTest.h" />
+    <ClInclude Include="TraceAddTest.h" />
+    <ClInclude Include="TransitionOrderTest.h" />
+    <ClInclude Include="TrivialStateMachineTest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Documentation\BasicForkJoinTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\BasicStateMachineTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\ChoiceStateTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\ContinuouslyRunningTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\DeepHistoryReEntryTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\DeepHistoryTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\ExceptionHandlingTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\ExtendedRunTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\ForkJoinToForkJoinTransitionTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\MultipleTriggersOnTransitionTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\ShallowHistoryTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\StateMachineRestartTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\StrategyTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="Documentation\TransitionOrderTest.vsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="InvalidTest.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="ValidTest.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

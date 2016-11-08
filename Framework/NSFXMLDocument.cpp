@@ -784,7 +784,7 @@ namespace NorthStateFramework
     {
         // get length of file:
         file.seekg(0, std::ios::end);
-        int length = file.tellg();
+        int length = (int) file.tellg();
         file.seekg(0, std::ios::beg);
 
         // Check that the file had a valid length
