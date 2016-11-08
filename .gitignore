@@ -3,3 +3,5 @@ Build
 HTML
 /Documentation/Doxygen/DoxygenLogfile.txt
 *.vspscc
+*.sdf
+*.sou
