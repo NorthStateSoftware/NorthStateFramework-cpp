@@ -20,7 +20,7 @@ a. Build Requirements
 
 b. Building the Software
 ------------------------
-* Open the file NorthStateFrameworkInC++Development.sln within Visual Studio.
+* Open the file NorthStateFrameworkInC++.sln within Visual Studio.
 * Choose either Debug or Release build configurations.
 * Build the code from the IDE
 * Output will be placed in the Build directory (either Debug or Release)
