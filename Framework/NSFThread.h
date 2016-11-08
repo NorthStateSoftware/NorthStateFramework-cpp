@@ -135,7 +135,7 @@ namespace NorthStateFramework
         NSFOSThread* osThread;
         NSFOSMutex* threadMutex;
         NSFThreadTerminationStatus terminationStatus;
-        int terminationSleepTime;
+        static int terminationSleepTime;
         static int terminationTimeout;
 
         /// <summary>

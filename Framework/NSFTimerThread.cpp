@@ -18,6 +18,7 @@
 
 #include "NSFEvent.h"
 #include "NSFExceptionHandler.h"
+#include "NSFTraceLog.h"
 #include <limits.h>
 
 namespace NorthStateFramework
@@ -25,7 +26,7 @@ namespace NorthStateFramework
     // Public
 
     NSFTimerThread::NSFTimerThread(const NSFString& name)
-        : NSFThread(name, NSFOSThread::getHighestPriority()), maxAllowableTimeGap(5000), maxObservedTimeGap(0), timer(NSFOSTimer::create(name))
+        : NSFThread(name, NSFOSThread::getHighestPriority()), maxAllowableTimeGap(5000), maxObservedTimeGap(0), nextTimeGapInterval(0), timer(NSFOSTimer::create(name))
     {
         TimeGapActions.setExceptionAction(NSFAction(this, &NSFTimerThread::handleTimeGapActionException));
 
@@ -230,11 +231,14 @@ namespace NorthStateFramework
             {
                 NSFTime timeGap = currentTime - readyActions.front()->getExecutionTime();
 
-                if ((maxAllowableTimeGap > 0) && (timeGap > maxAllowableTimeGap))
+                if ((maxAllowableTimeGap > 0) && (timeGap > maxAllowableTimeGap) && (currentTime > nextTimeGapInterval))
                 {
-                    std::runtime_error newException(getName() + " time gap occurred: " + toString(timeGap));
-                    handleException(newException);
-                    TimeGapActions.execute(NSFExceptionContext(this, newException));
+                    NSFTraceLog::getPrimaryTraceLog().addTrace(NSFTraceTags::ErrorTag(), NSFTraceTags::SourceTag(), getName(), NSFTraceTags::MessageTag(), "TimeGap", NSFTraceTags::ValueTag(), toString<NSFTime>(timeGap));
+                    TimeGapActions.execute(NSFContext(this));
+
+                    // Set time when next time gap can be recorded
+                    // This prevents all gapped timer events from recording time gap trace
+                    nextTimeGapInterval = currentTime + maxAllowableTimeGap;
                 }
 
                 if (timeGap > maxObservedTimeGap)

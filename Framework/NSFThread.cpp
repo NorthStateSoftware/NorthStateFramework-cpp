@@ -23,6 +23,7 @@
 
 namespace NorthStateFramework
 {
+    int NSFThread::terminationSleepTime = 10;
     int NSFThread::terminationTimeout = 60000;
 
     // Public
@@ -75,7 +76,7 @@ namespace NorthStateFramework
     NSFThread::NSFThread(const NSFString& name)
         : NSFTaggedObject(name),
         osThread(NSFOSThread::create(name, NSFAction(this, &NSFThread::threadEntry), NSFOSThread::getMediumPriority())), threadMutex(NSFOSMutex::create()),
-        terminationStatus(ThreadReady), terminationSleepTime(10)
+        terminationStatus(ThreadReady)
     {
         NSFEnvironment::getEnvironment().addThread(this);
     }
@@ -83,7 +84,7 @@ namespace NorthStateFramework
     NSFThread::NSFThread(const NSFString& name, int priority)
         : NSFTaggedObject(name),
         osThread(NSFOSThread::create(name, NSFAction(this, &NSFThread::threadEntry), priority)), threadMutex(NSFOSMutex::create()),
-        terminationStatus(ThreadReady), terminationSleepTime(10)
+        terminationStatus(ThreadReady)
     {
         NSFEnvironment::getEnvironment().addThread(this);
     }

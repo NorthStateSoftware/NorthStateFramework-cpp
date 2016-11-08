@@ -131,6 +131,7 @@ namespace NorthStateFramework
         std::list<NSFTimerAction*> actions;
         UInt32 maxAllowableTimeGap;
         NSFTime maxObservedTimeGap;
+        NSFTime nextTimeGapInterval;
         NSFOSTimer* timer;
 
         /// <summary>
