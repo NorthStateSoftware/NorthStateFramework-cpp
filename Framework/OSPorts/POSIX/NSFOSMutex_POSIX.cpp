@@ -65,11 +65,7 @@ namespace NorthStateFramework
 
     NSFOSMutex_POSIX::~NSFOSMutex_POSIX()
     {
-        int error = pthread_mutex_destroy(&mutex);
-        if (error != 0)
-        {
-            throw std::runtime_error("Mutex pthread_mutex_destroy() failed in destructor: " + toString(strerror(error)));
-        }
+        pthread_mutex_destroy(&mutex);
     }
 
     void NSFOSMutex_POSIX::lock()

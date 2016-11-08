@@ -51,11 +51,8 @@ namespace NorthStateFramework
 
     NSFOSSignal_POSIX::~NSFOSSignal_POSIX()
     {
-        send();
-        if (sem_destroy(&signalSemaphore) != 0)
-        {
-            throw std::runtime_error(getName() + " signal sem_destroy() failed in destructor: " + toString(strerror(errno)));
-        }
+        sem_post(&signalSemaphore);
+        sem_destroy(&signalSemaphore);
     }
 
     void NSFOSSignal_POSIX::clear()

@@ -88,14 +88,8 @@ namespace NorthStateFramework
 
     NSFOSThread_POSIX::~NSFOSThread_POSIX()
     {
-        if (sem_destroy(&startSemaphore) != 0)
-        {
-            throw std::runtime_error(getName() + " thread sem_destroy() failed in destructor: " + toString(strerror(errno)));
-        }
-        if (pthread_attr_destroy(&threadAttributes) != 0)
-        {
-            throw std::runtime_error(getName() + " thread pthread_attr_destroy() failed in destructor: " + toString(strerror(errno)));
-        }
+        sem_destroy(&startSemaphore);
+        pthread_attr_destroy(&threadAttributes);
     }
 
     int NSFOSThread_POSIX::getPriority() const
