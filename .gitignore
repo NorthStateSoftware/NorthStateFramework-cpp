@@ -5,5 +5,5 @@ HTML
 *.vspscc
 *.sdf
 *.opensdf
-*.sou
+*.suo
 /Test/*TraceFile*.xml
