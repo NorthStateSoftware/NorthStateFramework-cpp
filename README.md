@@ -31,22 +31,22 @@ c. Building the Software using Cmake
 ----------------------------
 * Assuming you are currently in the NSF source directory on a Unix machine
 * Create build directory
-        * mkdir cmake_build && cd cmake_build
+  * mkdir cmake_build && cd cmake_build
 * Build only static library in Release configuration
-        * cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
-        * make
-        * make install
+  * cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
+  * make
+  * make install
 * Build Debug configuration with tests and examples
-        * cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON -DBUILD_EXAMPLES=ON ..
-        * make
-        * make install
+  * cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON -DBUILD_EXAMPLES=ON ..
+  * make
+  * make install
 * Build Debug configuration with tests, examples and address sanitizer support for stack buffer overflow and memory leaks detection (libasan required)
-        * cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON -DBUILD_EXAMPLES=ON -DUSE_ADDRESS_SANITIZER=ON ..
-        * make
-        * make install
+  * cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON -DBUILD_EXAMPLES=ON -DUSE_ADDRESS_SANITIZER=ON ..
+  * make
+  * make install
 * Output will be placed in the Build directory in "dist" subdirectory
-	* Executables will be created for the test project and each of the example projects
-	* northstateframework.a will be created for use in other projects.
+  * Executables will be created for the test project and each of the example projects  
+  * northstateframework.a will be created for use in other projects.  
 
 By default Cmake will detect windows/linux systems and include appropriate OSPorts modules, but you can
 specify system name manually.
