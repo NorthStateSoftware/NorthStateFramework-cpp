@@ -799,7 +799,7 @@ namespace NorthStateFramework
         // read data as a block:
         file.read(buffer,length);
 
-        NSFString* string = new NSFString(buffer);
+        NSFString* string = new NSFString(buffer, length);
 
         delete buffer;
         return string;
