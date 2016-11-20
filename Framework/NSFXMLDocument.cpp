@@ -801,7 +801,7 @@ namespace NorthStateFramework
 
         NSFString* string = new NSFString(buffer, length);
 
-        delete buffer;
+        delete[] buffer;
         return string;
     }
 }
