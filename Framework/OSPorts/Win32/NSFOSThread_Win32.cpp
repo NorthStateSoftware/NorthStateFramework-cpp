@@ -59,8 +59,13 @@ namespace NorthStateFramework
         return new NSFOSThread_Win32(name, executionAction);
     }    
 
-    void NSFOSThread::sleep(UInt32 sleepTime)
+    void NSFOSThread::sleep(Int32 sleepTime)
     {
+        if (sleepTime < 0)
+        {
+            sleepTime = 0;
+        }
+
         ::Sleep(sleepTime);
     }
 
@@ -113,7 +118,9 @@ namespace NorthStateFramework
 
     void NSFOSThread_Win32::construct(int priority)
     {
-        if (!(threadHandle = CreateThread(NULL, NULL, &NSFOSThread_Win32::threadEntry, this, CREATE_SUSPENDED, &threadId)))
+        threadHandle = CreateThread(NULL, NULL, &NSFOSThread_Win32::threadEntry, this, CREATE_SUSPENDED, &threadId);
+
+        if (threadHandle == NULL)
         {
             throw std::runtime_error("Thread creation error: " + getName());
         }

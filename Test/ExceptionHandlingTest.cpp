@@ -84,12 +84,12 @@ namespace NSFTest
         return true;
     }
 
-    void ExceptionHandlingTest::state2EntryActions(const NSFStateMachineContext& context)
+    void ExceptionHandlingTest::state2EntryActions(const NSFStateMachineContext&)
     {
         throw std::runtime_error(IntentionalExceptionString());
     }
 
-    void ExceptionHandlingTest::localHandleException(const NSFExceptionContext& context)
+    void ExceptionHandlingTest::localHandleException(const NSFExceptionContext&)
     {
         event2.queueEvent();
     }

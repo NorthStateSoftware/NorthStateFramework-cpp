@@ -128,22 +128,22 @@ namespace NSFTest
         return true;
     }
 
-    void TransitionOrderTest::state1ReactionToEvent1Actions(const NSFStateMachineContext& context)
+    void TransitionOrderTest::state1ReactionToEvent1Actions(const NSFStateMachineContext&)
     {
         queueEvent(&event2);
     }
 
-    void TransitionOrderTest::state3ReactionToEvent1Actions(const NSFStateMachineContext& context)
+    void TransitionOrderTest::state3ReactionToEvent1Actions(const NSFStateMachineContext&)
     {
         queueEvent(&event2);
     }
 
-    void TransitionOrderTest::state2_1ExitActions(const NSFStateMachineContext& context)
+    void TransitionOrderTest::state2_1ExitActions(const NSFStateMachineContext&)
     {
         queueEvent(&event2);
     }
 
-    void TransitionOrderTest::state3_1ExitActions(const NSFStateMachineContext& context)
+    void TransitionOrderTest::state3_1ExitActions(const NSFStateMachineContext&)
     {
         queueEvent(&event3);
     }

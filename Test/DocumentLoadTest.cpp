@@ -30,7 +30,7 @@ namespace NSFTest
     {
     }
 
-    bool DocumentLoadTest::runTest(NSFString& errorMessage)
+    bool DocumentLoadTest::runTest(NSFString&)
     {
         NSFXMLDocument* document = new NSFXMLDocument();
 

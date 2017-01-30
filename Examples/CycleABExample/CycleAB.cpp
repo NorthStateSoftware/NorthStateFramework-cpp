@@ -125,22 +125,22 @@ namespace CycleABExample
         queueEvent(&cycleEvent);
     }
 
-    void CycleAB::initializeAEntryActions(const NSFStateMachineContext& context)
+    void CycleAB::initializeAEntryActions(const NSFStateMachineContext&)
     {
         aReadyEvent.schedule(InitializeADelayTime, 0);
     }
 
-    void CycleAB::cycleAEntryActions(const NSFStateMachineContext& context)
+    void CycleAB::cycleAEntryActions(const NSFStateMachineContext&)
     {
         aCompleteEvent.schedule(CompleteADelayTime, 0);
     }
 
-    void CycleAB::initializeBEntryActions(const NSFStateMachineContext& context)
+    void CycleAB::initializeBEntryActions(const NSFStateMachineContext&)
     {
         bReadyEvent.schedule(InitializeBDelayTime, 0);
     }
 
-    void CycleAB::cycleBEntryActions(const NSFStateMachineContext& context)
+    void CycleAB::cycleBEntryActions(const NSFStateMachineContext&)
     {
         bCompleteEvent.schedule(CompleteBDelayTime, 0);
     }

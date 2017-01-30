@@ -109,12 +109,12 @@ namespace CommandProcessorWithResetStateMachineExample
         commandQueue.push(((NSFDataEvent<string>*)(context.getTrigger()))->getData());
     }
 
-    bool CommandProcessorWithResetStateMachine::hasCommand(const NSFStateMachineContext& context)
+    bool CommandProcessorWithResetStateMachine::hasCommand(const NSFStateMachineContext&)
     {
         return (!commandQueue.empty());
     }
 
-    void CommandProcessorWithResetStateMachine::sendCommand(const NSFStateMachineContext& context)
+    void CommandProcessorWithResetStateMachine::sendCommand(const NSFStateMachineContext&)
     {
         // Code to send the command goes here
         // ...
@@ -129,19 +129,19 @@ namespace CommandProcessorWithResetStateMachineExample
         commandQueue.pop();
     }
 
-    void CommandProcessorWithResetStateMachine::waitForResponseEntryActions(const NSFStateMachineContext& context)
+    void CommandProcessorWithResetStateMachine::waitForResponseEntryActions(const NSFStateMachineContext&)
     {
         // Schedule timeout event, in case no response received           
         responseTimeoutEvent.schedule(responseTimeout, 0);
     }
 
-    void CommandProcessorWithResetStateMachine::waitForResponseExitActions(const NSFStateMachineContext& context)
+    void CommandProcessorWithResetStateMachine::waitForResponseExitActions(const NSFStateMachineContext&)
     {
         // Unschedule the timeout event
         responseTimeoutEvent.unschedule();
     }
 
-    bool CommandProcessorWithResetStateMachine::isResponse(const NSFStateMachineContext& context)
+    bool CommandProcessorWithResetStateMachine::isResponse(const NSFStateMachineContext&)
     {
         // Code to verify that the resposne is correct for the command goes here.
         // ...
@@ -163,13 +163,13 @@ namespace CommandProcessorWithResetStateMachineExample
         NSFTraceLog::getPrimaryTraceLog().addTrace(NSFTraceTags::MessageReceivedTag(), NSFTraceTags::SourceTag(), this->getName(), NSFTraceTags::MessageTag(), ((NSFDataEvent<string>*)(context.getTrigger()))->getData());
     }
 
-    void CommandProcessorWithResetStateMachine::errorEntryActions(const NSFStateMachineContext& context)
+    void CommandProcessorWithResetStateMachine::errorEntryActions(const NSFStateMachineContext&)
     {
         // Code to handle the error goes here
         // ...
     }
 
-    bool CommandProcessorWithResetStateMachine::isReady(const NSFStateMachineContext& context)
+    bool CommandProcessorWithResetStateMachine::isReady(const NSFStateMachineContext&)
     {
         return resetState.getReadyState().isActive();
     }

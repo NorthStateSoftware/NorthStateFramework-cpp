@@ -30,7 +30,7 @@ namespace NSFTest
     {
     }
 
-    bool TraceAddTest::runTest(NSFString& errorMessage)
+    bool TraceAddTest::runTest(NSFString&)
     {
         NSFTime startTime = NSFTimerThread::getPrimaryTimerThread().getCurrentTime();
 

@@ -32,7 +32,7 @@ namespace NSFTest
     {
     }
 
-    bool ContextSwitchTest::runTest(NSFString& errorMessage)
+    bool ContextSwitchTest::runTest(NSFString&)
     {
         thread1->startThread();
         thread2->startThread();
@@ -57,7 +57,7 @@ namespace NSFTest
 
     // Private
 
-    void ContextSwitchTest::thread1Loop(const NSFContext& context)
+    void ContextSwitchTest::thread1Loop(const NSFContext&)
     {
         while (contextSwitchCount < TotalContextSwitches)
         {
@@ -67,7 +67,7 @@ namespace NSFTest
         }
     }
 
-    void ContextSwitchTest::thread2Loop(const NSFContext& context)
+    void ContextSwitchTest::thread2Loop(const NSFContext&)
     {
         while (contextSwitchCount < TotalContextSwitches)
         {

@@ -36,7 +36,9 @@ namespace NorthStateFramework
     NSFOSTimer_Win32::NSFOSTimer_Win32(const NSFString& name)
         : NSFOSTimer(name), startTime(now())
     {
-        if (!(timerHandle = CreateWaitableTimer(NULL, false, NULL)))
+        timerHandle = CreateWaitableTimer(NULL, false, NULL);
+
+        if (timerHandle == NULL)
         {
             throw std::runtime_error(getName() + " unable to create waitable timer");
         }

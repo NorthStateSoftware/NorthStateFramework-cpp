@@ -33,7 +33,7 @@ namespace NorthStateFramework
 
     // Protected
 
-    void NSFShallowHistory::enter(NSFStateMachineContext& context, bool useHistory)
+    void NSFShallowHistory::enter(NSFStateMachineContext& context, bool)
     {
         // Base class behavior
         NSFState::enter(context, false);

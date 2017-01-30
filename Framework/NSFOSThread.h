@@ -146,7 +146,7 @@ namespace NorthStateFramework
         /// the specified number rounded up to the nearest clock period.
         /// A sleep time of zero has OS defined behavior.
         /// </remarks>
-        static void sleep(UInt32 sleepTime);
+        static void sleep(Int32 sleepTime);
 
         /// <summary>
         /// Starts the thread by calling its execution action.

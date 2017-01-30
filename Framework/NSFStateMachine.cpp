@@ -24,16 +24,16 @@
 
 namespace NorthStateFramework
 {
-#if (defined WIN32) || (defined WINCE)
-    // Using "this" in initializer as pointer to base type, disable warning as this is perfectly safe.
-#pragma warning( disable : 4355 )
-#endif
-
-
     const NSFBoolGuard<NSFStateMachineContext>* NSFStateMachine::Else = NULL;
     int NSFStateMachine::terminationTimeout = 60000;
 
     // Public
+
+#if (defined WIN32) || (defined WINCE)
+    // Using "this" in initializer as pointer to base type, disable warning as this is perfectly safe.
+#pragma warning( push )
+#pragma warning( disable : 4355 )
+#endif
 
     NSFStateMachine::NSFStateMachine(const NSFString& name, NSFEventThread* thread)
         : NSFCompositeState(name, (NSFRegion*)NULL, NULL, NULL),
@@ -67,6 +67,11 @@ namespace NorthStateFramework
     {
         construct();
     }
+
+#if (defined WIN32) || (defined WINCE)
+    // Using "this" in initializer as pointer to base type, disable warning as this is perfectly safe.
+#pragma warning( pop )
+#endif
 
     NSFStateMachine::~NSFStateMachine()
     {

@@ -30,7 +30,7 @@ namespace NSFTest
     {
     }
 
-    bool TimerGetTimeTest::runTest(NSFString& errorMessage)
+    bool TimerGetTimeTest::runTest(NSFString&)
     {
         int loops = 100000;
         NSFTime endTime;

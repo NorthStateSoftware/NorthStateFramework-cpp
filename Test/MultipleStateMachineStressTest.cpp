@@ -29,7 +29,7 @@ namespace NSFTest
 #endif
 
     MultipleStateMachineStressTest::MultipleStateMachineStressTest(const NSFString& name, int numberOfInstances, int numberOfCycles)
-        :name(name.c_str()), readyToTerminate(false), numberOfCycles(numberOfCycles), numberOfInstances(numberOfInstances)
+        :name(name.c_str()), numberOfCycles(numberOfCycles), numberOfInstances(numberOfInstances), readyToTerminate(false)
     {
     }
 
@@ -86,7 +86,7 @@ namespace NSFTest
         return returnValue;
     }
 
-    void MultipleStateMachineStressTest::terminateTest(const NSFStateMachineContext& context)
+    void MultipleStateMachineStressTest::terminateTest(const NSFStateMachineContext&)
     {
         readyToTerminate = true;
     }

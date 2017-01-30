@@ -34,7 +34,7 @@ namespace NorthStateFramework
 
     // Protected
 
-    void NSFDeepHistory::enter(NSFStateMachineContext& context, bool useHistory)
+    void NSFDeepHistory::enter(NSFStateMachineContext& context, bool)
     {
         // Base class behavior
         NSFState::enter(context, false);

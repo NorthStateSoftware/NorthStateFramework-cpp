@@ -35,7 +35,7 @@ namespace NSFTest
         delete thread;
     }
 
-    bool ThreadCreationTest::runTest(NSFString& errorMessage)
+    bool ThreadCreationTest::runTest(NSFString&)
     {
         bool returnValue = true;
         return returnValue;

@@ -99,6 +99,9 @@ namespace NorthStateFramework
 
     private:
 
+        // Make non-assignable
+        NSFExceptionContext& operator=(const NSFExceptionContext&);
+
         const std::exception& exception;
     };
 

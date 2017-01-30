@@ -1,5 +1,6 @@
 *.obj
 Build
+cmake_build
 HTML
 /Documentation/Doxygen/DoxygenLogfile.txt
 *.vspscc

@@ -64,8 +64,13 @@ namespace NorthStateFramework
         return new NSFOSThread_POSIX(name, executionAction);
     }
 
-    void NSFOSThread::sleep(UInt32 sleepTime)
+    void NSFOSThread::sleep(Int32 sleepTime)
     {
+        if (sleepTime < 0)
+        {
+            sleepTime = 0;
+        }
+
         timespec sleepTimespec = {sleepTime / MilliSecondsPerSecond, (sleepTime % MilliSecondsPerSecond) * NanoSecondsPerMilliSecond};
         NSFOSThread_POSIX::sleepUntil(&sleepTimespec);
     }

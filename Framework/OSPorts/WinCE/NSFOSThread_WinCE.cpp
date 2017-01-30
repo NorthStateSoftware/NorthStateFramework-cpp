@@ -79,8 +79,13 @@ namespace NorthStateFramework
         return new NSFOSThread_WinCE(name, executionAction);
     }    
 
-    void NSFOSThread::sleep(UInt32 sleepTime)
+    void NSFOSThread::sleep(Int32 sleepTime)
     {
+        if (sleepTime < 0)
+        {
+            sleepTime = 0;
+        }
+
         ::Sleep(sleepTime);
     }
 

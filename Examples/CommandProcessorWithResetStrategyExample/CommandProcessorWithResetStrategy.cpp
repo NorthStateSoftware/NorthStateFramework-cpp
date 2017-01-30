@@ -37,7 +37,7 @@ namespace CommandProcessorWithResetStrategyExample
         terminate(true);
     }
 
-    bool CommandProcessorWithResetStrategy::isReady(const NSFStateMachineContext& context)
+    bool CommandProcessorWithResetStrategy::isReady(const NSFStateMachineContext&)
     {
         return resetStrategy.getReadyState().isActive();
     }

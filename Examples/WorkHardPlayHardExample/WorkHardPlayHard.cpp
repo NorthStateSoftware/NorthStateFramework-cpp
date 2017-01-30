@@ -92,8 +92,4 @@ namespace WorkHardPlayHardExample
     {
         queueEvent(&backToWorkEvent);
     }
-
-
-
-
 }

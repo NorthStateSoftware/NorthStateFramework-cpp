@@ -26,7 +26,7 @@
 
 #ifndef NULL
 #define NULL  0
-#endif //NULL
+#endif // NULL
 
 namespace NorthStateFramework
 {
@@ -48,11 +48,11 @@ namespace NorthStateFramework
     typedef std::string NSFString;
     typedef Int64 NSFTime;
 
-    const NSFTime MilliSecondsPerSecond = 1000;
-    const NSFTime MicroSecondsPerSecond = 1000000;
-    const NSFTime NanoSecondsPerSecond = 1000000000;
-    const NSFTime MicroSecondsPerMilliSecond = 1000;
-    const NSFTime NanoSecondsPerMilliSecond = 1000000;
+    const Int32 MilliSecondsPerSecond = 1000;
+    const Int32 MicroSecondsPerSecond = 1000000;
+    const Int32 NanoSecondsPerSecond = 1000000000;
+    const Int32 MicroSecondsPerMilliSecond = 1000;
+    const Int32 NanoSecondsPerMilliSecond = 1000000;
 
     template<class T> inline NSFString toString(const T& value)
     {

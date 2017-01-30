@@ -60,6 +60,12 @@ namespace NorthStateFramework
         virtual NSFVoidAction* copy() const = 0;
     };
 
+#if (defined WIN32) || (defined WINCE)
+    // Compiler bug issues warning 4121 with pointer to member function
+#pragma warning( push )
+#pragma warning( disable : 4121 )
+#endif
+
     /// <summary>
     /// Represents a member function action.
     /// </summary>
@@ -103,6 +109,10 @@ namespace NorthStateFramework
         void (ObjectType::*memberFunction)(const ContextType&);
         void (ObjectType::*nullaryMemberFunction)();
     };
+
+#if (defined WIN32) || (defined WINCE)
+#pragma warning( pop )
+#endif
 
     /// <summary>
     /// Represents a global function action.

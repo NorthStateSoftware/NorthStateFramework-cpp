@@ -38,7 +38,7 @@ namespace CommandProcessorWithRetryExample
         terminate(true);
     }
 
-    void CommandProcessorWithRetry::retrySend(const NSFStateMachineContext& context)
+    void CommandProcessorWithRetry::retrySend(const NSFStateMachineContext&)
     {
         NSFDebugUtility::getPrimaryDebugUtility().writeLineToConsole(NSFString("Retry send ..."));
         ++retries;
@@ -49,12 +49,12 @@ namespace CommandProcessorWithRetryExample
         responseTimeoutEvent.schedule(responseTimeout, 0);
     }
 
-    void CommandProcessorWithRetry::waitForResponseEntryActions(const NSFStateMachineContext& context)
+    void CommandProcessorWithRetry::waitForResponseEntryActions(const NSFStateMachineContext&)
     {
         retries = 0;
     }
 
-    bool CommandProcessorWithRetry::canRetry(const NSFStateMachineContext& context)
+    bool CommandProcessorWithRetry::canRetry(const NSFStateMachineContext&)
     {
         return (retries < maxRetries);
     }

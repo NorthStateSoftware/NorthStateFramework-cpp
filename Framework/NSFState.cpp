@@ -152,7 +152,7 @@ namespace NorthStateFramework
         }
     }
 
-    void NSFState::enter(NSFStateMachineContext& context, bool useHistory)
+    void NSFState::enter(NSFStateMachineContext& context, bool)
     {
         active = true;
 

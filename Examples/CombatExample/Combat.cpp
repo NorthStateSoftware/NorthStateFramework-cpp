@@ -51,8 +51,8 @@ namespace CombatExample
         scoutingToAttackChoiceTransition("ScoutingToAttackChoice", &scoutingState, &attackChoiceState, &scoutEvent, NULL, NULL),
         scoutingInitialToPatrolTransition("ScoutingInitialToPatrol", &scoutingInitialState, &patrolState, NULL, NULL, NULL),
         attackChoiceToPatrolTransition("AttackChoiceToPatrol", &attackChoiceState, &patrolState, NULL, Else, NULL),
-        attackChoiceToAttackTransition("AttackChoiceToAttack", &attackChoiceState, &attackState, NULL, NSFGuard(this, &Combat::isEnemyInRange), NULL),
-        attackChoiceToMoveToEnemyTransition("AttackChoiceToMoveToEnemy", &attackChoiceState, &moveToEnemyState, NULL, NSFGuard(this, &Combat::isEnemyNear), NULL)
+        attackChoiceToMoveToEnemyTransition("AttackChoiceToMoveToEnemy", &attackChoiceState, &moveToEnemyState, NULL, NSFGuard(this, &Combat::isEnemyNear), NULL),
+        attackChoiceToAttackTransition("AttackChoiceToAttack", &attackChoiceState, &attackState, NULL, NSFGuard(this, &Combat::isEnemyInRange), NULL)
     {
     }
 
@@ -78,7 +78,7 @@ namespace CombatExample
         return ((distanceToEnemy < nearDistance) && (!isEnemyInRange(context)));
     }
 
-    bool Combat::isEnemyInRange(const NSFStateMachineContext& context)
+    bool Combat::isEnemyInRange(const NSFStateMachineContext&)
     {
         return (distanceToEnemy < inRangeDistance);
     }

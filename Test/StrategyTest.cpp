@@ -127,7 +127,7 @@ namespace NSFTest
         return true;
     }
 
-    void StrategyTest::state5EntryActions(const NSFStateMachineContext& context)
+    void StrategyTest::state5EntryActions(const NSFStateMachineContext&)
     {
         event2.queueEvent();
     }

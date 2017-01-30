@@ -25,7 +25,7 @@ namespace NSFTest
     {
     }
 
-    bool TimerResolutionTest::runTest(NSFString& errorMessage)
+    bool TimerResolutionTest::runTest(NSFString&)
     {
         NSFTime startTime = NSFTimerThread::getPrimaryTimerThread().getCurrentTime();
         NSFTime lastTime = startTime;

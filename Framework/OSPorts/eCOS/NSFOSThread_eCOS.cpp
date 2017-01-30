@@ -65,9 +65,14 @@ namespace NorthStateFramework
         return new NSFOSThread_eCOS(name, executionAction);
     }    
 
-    void NSFOSThread::sleep(UInt32 sleepTime)
+    void NSFOSThread::sleep(Int32 sleepTime)
     {
         static cyg_resolution_t timerResolution = cyg_clock_get_resolution(cyg_real_time_clock());
+
+        if (sleepTime < 0)
+        {
+            sleepTime = 0;
+        }
 
         // Assumes cyg_clock_get_resolution(cyg_real_time_clock()).divisor is in Hz (ticks/sec), as per documentation.
         cyg_thread_delay(((sleepTime * timerResolution.divisor) + 999) / 1000);

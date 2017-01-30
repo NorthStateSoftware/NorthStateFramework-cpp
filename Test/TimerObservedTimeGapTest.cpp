@@ -24,7 +24,7 @@ namespace NSFTest
     {
     }
 
-    bool TimerObservedTimeGapTest::runTest(NSFString& errorMessage)
+    bool TimerObservedTimeGapTest::runTest(NSFString&)
     {
         // Add results to name for test visibility
         name += "; Max Observed Time Gap = " + toString(NSFTimerThread::getPrimaryTimerThread().getMaxObservedTimeGap()) + " mS";

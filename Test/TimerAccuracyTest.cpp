@@ -31,7 +31,7 @@ namespace NSFTest
         delete eventHandler.getEventThread();
     }
 
-    bool TimerAccuracyTest::runTest(NSFString& errorMessage)
+    bool TimerAccuracyTest::runTest(NSFString&)
     {
         eventHandler.addEventReaction(&testEvent, NSFAction(this, &TimerAccuracyTest::testEventAction));
 
@@ -50,7 +50,7 @@ namespace NSFTest
         return true;
     }
 
-    void TimerAccuracyTest::testEventAction(const NSFEventContext& context)
+    void TimerAccuracyTest::testEventAction(const NSFEventContext&)
     {
         NSFTime currentTime = NSFTimerThread::getPrimaryTimerThread().getCurrentTime();
 

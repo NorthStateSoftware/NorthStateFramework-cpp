@@ -125,12 +125,12 @@ namespace NSFTest
         return true;
     }
 
-    void ExtendedRunTest::state2ReactionToEvent1Actions(const NSFStateMachineContext& context)
+    void ExtendedRunTest::state2ReactionToEvent1Actions(const NSFStateMachineContext&)
     {
         queueEvent(&event2);
     }
 
-    void ExtendedRunTest::Test13ReactionToEvent2Actions(const NSFStateMachineContext& context)
+    void ExtendedRunTest::Test13ReactionToEvent2Actions(const NSFStateMachineContext&)
     {
         queueEvent(&event1);
     }

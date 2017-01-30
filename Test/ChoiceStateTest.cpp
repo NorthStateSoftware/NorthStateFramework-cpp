@@ -108,17 +108,17 @@ namespace NSFTest
         return true;
     }
 
-    bool ChoiceStateTest::isValueLow(const NSFStateMachineContext& context)
+    bool ChoiceStateTest::isValueLow(const NSFStateMachineContext&)
     {
         return (value < 10);
     }
 
-    bool ChoiceStateTest::isValueHigh(const NSFStateMachineContext& context)
+    bool ChoiceStateTest::isValueHigh(const NSFStateMachineContext&)
     {
         return (value > 10);
     }
 
-    void ChoiceStateTest::addValue(const NSFStateMachineContext& context)
+    void ChoiceStateTest::addValue(const NSFStateMachineContext&)
     {
         value += 10;
     }

@@ -114,7 +114,7 @@ int main(int argc, char* argv[])
         NSFTraceLog::getPrimaryTraceLog().saveLog("TraceFile_SomeFailed.xml");
     }
 
-    NSFDebugUtility::getPrimaryDebugUtility().writeLineToConsole(NSFString("Press any key to continue"));
+    NSFDebugUtility::getPrimaryDebugUtility().writeLineToConsole(NSFString("Press Enter key to continue"));
     cin.get();
 
     while (!tests.empty())

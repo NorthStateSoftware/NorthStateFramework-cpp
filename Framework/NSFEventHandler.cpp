@@ -24,14 +24,15 @@
 
 namespace NorthStateFramework
 {
-#if (defined WIN32) || (defined WINCE)
-    // Using "this" in initializer as pointer to base type, disable warning as this is perfectly safe.
-#pragma warning( disable : 4355 )
-#endif
-
     int NSFEventHandler::terminationTimeout = 60000;
 
     // Public
+
+#if (defined WIN32) || (defined WINCE)
+    // Using "this" in initializer as pointer to base type, disable warning as this is perfectly safe.
+#pragma warning( push )
+#pragma warning( disable : 4355 )
+#endif
 
     NSFEventHandler::NSFEventHandler(const NSFString& name, NSFEventThread* thread)
         : NSFTaggedObject(name), loggingEnabled(true), eventThread(thread),
@@ -40,6 +41,11 @@ namespace NorthStateFramework
     {
         getEventThread()->addEventHandler(this);
     }
+
+#if (defined WIN32) || (defined WINCE)
+    // Using "this" in initializer as pointer to base type, disable warning as this is perfectly safe.
+#pragma warning( pop )
+#endif
 
     NSFEventHandler::~NSFEventHandler()
     {

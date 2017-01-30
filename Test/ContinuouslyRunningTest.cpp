@@ -72,7 +72,7 @@ namespace NSFTest
         delete getEventThread();
     }
 
-    bool ContinuouslyRunningTest::runTest(NSFString& errorMessage)
+    bool ContinuouslyRunningTest::runTest(NSFString&)
     {
         // start the state machine
         startStateMachine();
@@ -80,17 +80,17 @@ namespace NSFTest
         return true;
     }
 
-    void ContinuouslyRunningTest::state1EntryAction(const NSFStateMachineContext& context)
+    void ContinuouslyRunningTest::state1EntryAction(const NSFStateMachineContext&)
     {
         state1_1.EntryActions += NSFAction(this, &ContinuouslyRunningTest::state1_1EntryAction);
     }
 
-    void ContinuouslyRunningTest::state1ExitAction(const NSFStateMachineContext& context)
+    void ContinuouslyRunningTest::state1ExitAction(const NSFStateMachineContext&)
     {
         state1_1.EntryActions -= NSFAction(this, &ContinuouslyRunningTest::state1_1EntryAction);
     }
 
-    void ContinuouslyRunningTest::state1_1EntryAction(const NSFStateMachineContext& context)
+    void ContinuouslyRunningTest::state1_1EntryAction(const NSFStateMachineContext&)
     {
         ++currentEventCount;
 

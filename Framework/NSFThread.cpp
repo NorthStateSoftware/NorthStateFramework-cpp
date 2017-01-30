@@ -70,6 +70,7 @@ namespace NorthStateFramework
 
 #if (defined WIN32) || (defined WINCE)
     // Using "this" in initializer as pointer to member for action invocation, disable warning as this is perfectly safe.
+#pragma warning( push )
 #pragma warning( disable : 4355 )
 #endif
 
@@ -89,6 +90,11 @@ namespace NorthStateFramework
         NSFEnvironment::getEnvironment().addThread(this);
     }
 
+#if (defined WIN32) || (defined WINCE)
+    // Using "this" in initializer as pointer to member for action invocation, disable warning as this is perfectly safe.
+#pragma warning( pop )
+#endif
+
     void NSFThread::handleException(const std::exception& exception)
     {
         // NSFExceptionContext maintains exception as a reference, so use two statements for proper scoping
@@ -106,7 +112,7 @@ namespace NorthStateFramework
 
     // Private
 
-    void NSFThread::threadEntry(const NSFContext& context)
+    void NSFThread::threadEntry(const NSFContext&)
     {
         try
         {

@@ -36,7 +36,7 @@ namespace NSFTest
         delete getEventThread();
     }
 
-    bool TrivialStateMachineTest::runTest(NSFString& errorMessage)
+    bool TrivialStateMachineTest::runTest(NSFString&)
     {
         bool returnValue = true;
         startStateMachine();

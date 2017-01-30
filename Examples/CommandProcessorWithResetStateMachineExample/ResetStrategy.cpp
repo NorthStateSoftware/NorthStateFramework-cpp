@@ -66,25 +66,25 @@ namespace CommandProcessorWithResetStateMachineExample
         terminate(true);
     }
 
-    void ResetStrategy::resetVariables(const NSFStateMachineContext& context)
+    void ResetStrategy::resetVariables(const NSFStateMachineContext&)
     {
         hardwareReset = false;
         commReady = false;
     }
 
-    void ResetStrategy::resetHardware(const NSFContext& context)
+    void ResetStrategy::resetHardware(const NSFContext&)
     {
         hardwareReset = true;
         queueEvent(&hardwareResetEvent);
     }
 
-    void ResetStrategy::resetComm(const NSFContext& context)
+    void ResetStrategy::resetComm(const NSFContext&)
     {
         commReady = true;
         queueEvent(&commReadyEvent);
     }
 
-    void ResetStrategy::resetHardwareEntryActions(const NSFStateMachineContext& context)
+    void ResetStrategy::resetHardwareEntryActions(const NSFStateMachineContext&)
     {
         hardwareReset = false;
 
@@ -92,7 +92,7 @@ namespace CommandProcessorWithResetStateMachineExample
         resetHardwareAction.schedule(hardwareResetDelayTime);
     }
 
-    void ResetStrategy::reestablishCommunicationsEntryActions(const NSFStateMachineContext& context)
+    void ResetStrategy::reestablishCommunicationsEntryActions(const NSFStateMachineContext&)
     {
         commReady = false;
 
@@ -100,12 +100,12 @@ namespace CommandProcessorWithResetStateMachineExample
         readyCommAction.schedule(commReadyDelayTime);
     }
 
-    bool ResetStrategy::isHardwareReset(const NSFStateMachineContext& context)
+    bool ResetStrategy::isHardwareReset(const NSFStateMachineContext&)
     {
         return hardwareReset;
     }
 
-    bool ResetStrategy::isCommReady(const NSFStateMachineContext& context)
+    bool ResetStrategy::isCommReady(const NSFStateMachineContext&)
     {
         return commReady;
     }
