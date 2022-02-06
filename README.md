@@ -15,7 +15,7 @@ Compilation
 
 a. Build Requirements
 ---------------------
-* The solution provided is compatible with Visual Studio 2013.
+* The solution provided is compatible with Visual Studio 2017.
 * <a href="http://www.doxygen.org/">Doxygen</a> is required to build the documentation. (Optional)
 
 b. Building the Software using Visual Studio
