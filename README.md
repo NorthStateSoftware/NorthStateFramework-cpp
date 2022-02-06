@@ -1,7 +1,7 @@
 NorthStateFramework-cpp
 =======================
 
-An object-oriented framework for implementing UML state machines.  For more information, see the pages <a href="http://northstatesoftware.github.io/NorthStateFramework-cpp/index.html">here.</a>
+An object-oriented framework for implementing UML state machines.  For more information, see the pages <a href="https://www.northstatesoftware.com/uml-state-machine-code-generation-framework.html">here.</a>
 
 
 
