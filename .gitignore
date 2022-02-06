@@ -1,3 +1,4 @@
+.vs/
 *.obj
 Build
 cmake_build
